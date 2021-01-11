@@ -179,7 +179,7 @@ if(WITH_CODEC_FFMPEG)
     # For precompiled lib directory, all ffmpeg dependencies are in the same folder
     #file(GLOB ffmpeg_libs ${LIBDIR}/ffmpeg/lib/*.a ${LIBDIR}/sndfile/lib/*.a)
     set (LIBDIR_NEW /home/kuba/toolchains)
-    file(GLOB ffmpeg_libs ${LIBDIR_NEW}/ffmpeg/lib/*.a ${LIBDIR_NEW}/sndfile/lib/*.a)
+    file(GLOB ffmpeg_libs ${LIBDIR_NEW}/ffmpeg/lib/*.a ${LIBDIR_NEW}/sndfile/lib/*.a )
     message (STATUS ${LIBDIR_NEW} aaaaaaaaaaaaaaaaaaaaaaaaa)
     set(FFMPEG ${LIBDIR_NEW}/ffmpeg CACHE PATH "FFMPEG Directory")
     set(FFMPEG_LIBRARIES ${ffmpeg_libs} ${ffmpeg_libs} CACHE STRING "FFMPEG Libraries")

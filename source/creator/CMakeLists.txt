@@ -1101,10 +1101,11 @@ install(
 # Setup link libs
 
 add_dependencies(blender makesdna)
-list(INSERT LIB 0 ${FFMPEG_LIBRARIES})
+list(INSERT LIB 0 ${FFMPEG_LIBRARIES} )
 message(STATUS LLLLLL ${LIB})
 # for now manually add missing libs from ~/toolchains/ffmpeg/lib/pkgconfig to link against
-set (FFMPEG_LIBS_PC avcodec pthread m z va avfilter  avdevice m xcb xcb-shm xcb-shape xcb-xfixes asound avutil va-drm va vdpau X11 swresample swscale)
+set (FFMPEG_LIBS_PC avcodec pthread m z va avfilter  avdevice m xcb xcb-shm xcb-shape xcb-xfixes asound avutil va-drm va vdpau X11 postproc swresample swscale mp3lame)
+
 target_link_libraries(blender ${LIB} ${FFMPEG_LIBS_PC})
 unset(LIB)
 
